@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="css/mdb.min.css" />
   </head>
   <body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- DEBUT DU PROJET-->
 <!-- ___________________________PARTIE NAVBAR DEBUT_____________________________ -->
     <!-- Navbar -->
@@ -208,6 +209,7 @@
   <div class="card-body text-white">
     <h5 class="card-title text-center"> <a href="#" class="text-white" >SOMMEIL REPARATEUR</a></h5>
   </div>
+
 </div>
 <!-- Card1 -->
 <div> <!-- espacement --></div>
@@ -219,6 +221,21 @@
   <div class="card-body text-white">
     <h5 class="card-title text-center"> <a href="#" class="text-white" >ROUTINE SPORTIVE</a></h5>
   </div>
+  <!--insertion de vue.js-->
+  <div id="sport">
+    <p>{{produit}} disponible</p>
+  </div>
+  <script>
+    const{createApp} = Vue
+
+    createApp({
+      data(){
+        return{
+          produit:'Amamélisse'
+        }
+      }
+    }).mount('#sport')
+  </script>
 </div>
 <!-- Card2 -->
 <div> <!-- espacement --></div>
